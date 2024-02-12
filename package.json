@@ -25,6 +25,11 @@
     "format": "prettier --write \"src/**/*.+(js|ts|jsx|tsx)\"",
     "prepare": "husky install"
   },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -44,6 +49,8 @@
     ]
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.4.2",
+    "@commitlint/config-conventional": "^17.4.2",
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "@typescript-eslint/parser": "^6.21.0",
     "eslint": "^8.56.0",
